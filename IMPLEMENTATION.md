@@ -49,11 +49,18 @@
   無いためイメージビルド自体は未検証。代わりにクリーンな venv への
   `pip install .` とインストール済み `python-sloc-counter` の実行は検証済み
 
-## 未実装（残り）
+## 完了（2026-11-27）
 
-- ゴールデンファイルによる出力固定
-- プロジェクト名の確定とリポジトリ作成・公開（Arch-notes で公開する
-  方針は決定済み。完全にできるまで push しない、がユーザーの条件）
+- ゴールデンファイルによる出力固定（tests/golden、UPDATE_GOLDEN で再生成）
+- N1: クラス単位の集計（classes[]、non_method_counts）
+- N3: 行分類の言語別定義（LINE-CLASSIFICATION.md）
+- 名称: 当初案 `kazoe` は原典由来のためユーザーが却下し、
+  `python-sloc-counter`（パッケージ python_sloc_counter、コマンド
+  python-sloc-counter）で確定
+- 公開: https://github.com/Arch-notes/python-sloc-counter（Public、MIT）。
+  初回 push は gh の OAuth に workflow スコープが無く workflow ファイルが
+  弾かれたため、専用 Deploy Key（SSH エイリアス github-sloc）で push。
+  GitHub Actions の CI（unittest＋ドッグフーディング）は成功を確認
 
 ## 既知の割り切り
 
