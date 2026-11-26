@@ -5,9 +5,9 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from kazoe.compare import compare_results
-from kazoe.counter import count_file, count_tree
-from kazoe.output import count_document, compare_document, render_csv, render_json
+from python_sloc_counter.compare import compare_results
+from python_sloc_counter.counter import count_file, count_tree
+from python_sloc_counter.output import count_document, compare_document, render_csv, render_json
 
 PY_SAMPLE = '''"""モジュールの説明"""
 import os

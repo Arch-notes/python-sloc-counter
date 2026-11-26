@@ -64,7 +64,7 @@ def count_document(results, root_label: str = "") -> dict:
     return {
         "schema_version": SCHEMA_VERSION,
         "kind": "count",
-        "tool": {"name": "kazoe", "version": __version__},
+        "tool": {"name": "python-sloc-counter", "version": __version__},
         "root": root_label,
         "summary": {
             "files": len(results),
@@ -106,7 +106,7 @@ def compare_document(comp: dict, before_label: str, after_label: str,
     doc = {
         "schema_version": SCHEMA_VERSION,
         "kind": "compare",
-        "tool": {"name": "kazoe", "version": __version__},
+        "tool": {"name": "python-sloc-counter", "version": __version__},
         "before": before_label, "after": after_label,
         "files": [pair_out(p, with_items=False) for p in comp["files"]],
         "functions": [pair_out(p) for p in comp["functions"]],
@@ -189,7 +189,7 @@ def render_markdown(doc: dict) -> str:
     if doc["kind"] == "count":
         s = doc["summary"]
         c = s["counts"]
-        lines += [f"# kazoe count — {doc['root']}", "",
+        lines += [f"# python-sloc-counter count — {doc['root']}", "",
                   f"Files: {s['counted']} counted, {s['skipped_binary']} binary skipped, "
                   f"{s['errors']} errors",
                   f"Lines: total {c['total']}, effective {c['effective']}, "
@@ -210,7 +210,7 @@ def render_markdown(doc: dict) -> str:
                          f"{c['total']} | {c['effective']} | {c['comment']} | {c['blank']} |")
         lines.append("")
     else:
-        lines += [f"# kazoe compare — {doc['before']} -> {doc['after']}", "",
+        lines += [f"# python-sloc-counter compare — {doc['before']} -> {doc['after']}", "",
                   "| path | status | before | after | delta | +lines | -lines | unchanged |",
                   "|---|---|---:|---:|---:|---:|---:|---:|"]
         for p in doc["files"]:

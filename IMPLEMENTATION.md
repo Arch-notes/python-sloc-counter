@@ -5,7 +5,7 @@
 
 ## 実装済み
 
-- 正規化層（kazoe/normalize.py）: BOM（UTF-8／UTF-16）、ISO-2022-JP の
+- 正規化層（python_sloc_counter/normalize.py）: BOM（UTF-8／UTF-16）、ISO-2022-JP の
   エスケープ検出、UTF-8／CP932／EUC-JP の strict 試行＋日本語らしさスコア、
   ambiguous_encoding 警告、バイナリ判定（先頭 8KB の NUL。UTF-16 は除外）、
   改行は CR／LF／CRLF のみで分割
@@ -20,7 +20,7 @@
 - 比較層: 段階制マッチング（完全一致→シグネチャ変化→本体ハッシュで
   moved／renamed）、行レベル内訳（lines_added／deleted／unchanged）
 - 出力: JSON（正本）、CSV（ロング形式、UTF-8 BOM 付き）、Markdown
-- CLI: `kazoe count <path>` / `kazoe compare <before> <after>`、
+- CLI: `python-sloc-counter count <path>` / `python-sloc-counter compare <before> <after>`、
   終了コード 0／1／2
 - テスト（unittest、依存は PyYAML のみ）:
   文字コード5種×改行3種のマトリクスでカウント一致と相互比較ゼロ、
@@ -37,7 +37,7 @@
 
 ## 実装済み（追加分2、2026-11-27）
 
-- 優先度3: Git リファレンス比較。`kazoe git-compare <repo> <ref> <ref>`。
+- 優先度3: Git リファレンス比較。`python-sloc-counter git-compare <repo> <ref> <ref>`。
   ref をコミットへ解決し `git archive` で展開してフォルダ比較にかける。
   解決済みコミットハッシュを出力の `resolved` に必ず入れる
 - 優先度4: JSON Schema を `schemas/` に同梱（count／compare）。
@@ -47,7 +47,7 @@
   `--strict-detection`（曖昧な文字コード判定をエラーにする）
 - 優先度6: Dockerfile と README を用意。ただしこの VM には Docker が
   無いためイメージビルド自体は未検証。代わりにクリーンな venv への
-  `pip install .` とインストール済み `kazoe` の実行は検証済み
+  `pip install .` とインストール済み `python-sloc-counter` の実行は検証済み
 
 ## 未実装（残り）
 

@@ -7,9 +7,9 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from kazoe.counter import count_tree
-from kazoe.gitcompare import git_compare
-from kazoe.output import compare_document, count_document
+from python_sloc_counter.counter import count_tree
+from python_sloc_counter.gitcompare import git_compare
+from python_sloc_counter.output import compare_document, count_document
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 
@@ -70,7 +70,7 @@ class SchemaTest(unittest.TestCase):
             write(os.path.join(td, "q.sql"),
                   b"CREATE TABLE t (\n  id INTEGER\n);\n")
             doc = count_document(count_tree(td), td)
-            self._validate("kazoe-count.schema.json", doc)
+            self._validate("count.schema.json", doc)
 
     def test_compare_schema(self):
         with tempfile.TemporaryDirectory() as td:
@@ -87,7 +87,7 @@ class SchemaTest(unittest.TestCase):
             doc = compare_document(comp, "HEAD~1", "HEAD",
                                     {"before_commit": meta["before_commit"],
                                      "after_commit": meta["after_commit"]})
-            self._validate("kazoe-compare.schema.json", doc)
+            self._validate("compare.schema.json", doc)
 
 
 class OptionsTest(unittest.TestCase):

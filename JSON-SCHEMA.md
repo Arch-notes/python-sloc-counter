@@ -27,7 +27,7 @@
 - ツールの版は別物として `tool: {name, version}` に出す。
   「スキーマの版」と「ツールの版」を混ぜない。
 - リポジトリに JSON Schema（draft 2020-12）ファイルを同梱する
-  （`schemas/kazoe-count.schema.json` / `kazoe-compare.schema.json`）。
+  （`schemas/count.schema.json` / `compare.schema.json`）。
   出力はテストで常にスキーマ検証にかける（ゴールデンファイルと併用）。
 
 ## 2. 共通エンベロープ
@@ -38,7 +38,7 @@ count / compare 共通の外枠:
 {
   "schema_version": "1.0",
   "kind": "count",
-  "tool": {"name": "kazoe", "version": "0.1.0"},
+  "tool": {"name": "python-sloc-counter", "version": "0.1.0"},
   "status": "ok",
   "run": {
     "target": "src/",

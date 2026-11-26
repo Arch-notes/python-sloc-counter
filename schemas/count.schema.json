@@ -209,7 +209,7 @@
       "type": "object"
     }
   },
-  "$id": "kazoe-count.schema.json",
+  "$id": "count.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "properties": {
     "files": {
@@ -283,6 +283,6 @@
     "summary",
     "files"
   ],
-  "title": "kazoe count output",
+  "title": "python-sloc-counter count output",
   "type": "object"
 }

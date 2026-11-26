@@ -19,4 +19,4 @@ jobs:
       - name: Test
         run: python -m unittest discover -s tests -v
       - name: Dogfood (count this repository)
-        run: kazoe count . --format md
+        run: python-sloc-counter count . --format md

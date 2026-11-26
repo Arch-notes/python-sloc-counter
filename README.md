@@ -1,7 +1,8 @@
-# kazoe
+# python-sloc-counter
 
-CI-oriented step counter — a Python reimplementation of Kazoe Chao!
-(かぞえチャオ！), extended for modern repositories.
+A CI-oriented SLOC (source lines of code) counter written in Python.
+Inspired by the classic Japanese step counter Kazoe Chao!
+(かぞえチャオ！), reimagined for modern repositories.
 
 - Function-level counts for Python, JavaScript/TypeScript and SQL
   stored procedures; declarative units for Terraform, Kubernetes,
@@ -18,9 +19,9 @@ CI-oriented step counter — a Python reimplementation of Kazoe Chao!
 ## Usage
 
 ```console
-kazoe count <path> [--format json|csv|md]
-kazoe compare <before> <after> [--format json|csv|md]
-kazoe git-compare <repo> <ref-before> <ref-after>
+python-sloc-counter count <path> [--format json|csv|md]
+python-sloc-counter compare <before> <after> [--format json|csv|md]
+python-sloc-counter git-compare <repo> <ref-before> <ref-after>
 ```
 
 Options: `--encoding` to force an encoding, `--on-error strict|abort|replace`
@@ -30,8 +31,8 @@ detection.
 ## Docker
 
 ```console
-docker build -t kazoe .
-docker run --rm -v "$PWD:/work" kazoe count . --format md
+docker build -t python-sloc-counter .
+docker run --rm -v "$PWD:/work" python-sloc-counter count . --format md
 ```
 
 Design documents (Japanese) live next to the source: V1-SCOPE.md,

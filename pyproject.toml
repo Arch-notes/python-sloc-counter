@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "kazoe"
+name = "python-sloc-counter"
 version = "0.1.0"
-description = "CI-oriented step counter: function/unit-level counts and before/after comparison (Kazoe Chao! reimplementation in Python)"
+description = "CI-oriented SLOC counter in Python: function/unit-level counts and before/after comparison"
 requires-python = ">=3.11"
 dependencies = [
     "PyYAML>=6.0",
@@ -18,7 +18,7 @@ dependencies = [
 dev = ["jsonschema>=4.0"]
 
 [project.scripts]
-kazoe = "kazoe.cli:main"
+python-sloc-counter = "python_sloc_counter.cli:main"
 
 [tool.setuptools]
-packages = ["kazoe"]
+packages = ["python_sloc_counter"]

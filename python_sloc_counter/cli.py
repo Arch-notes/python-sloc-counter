@@ -1,4 +1,4 @@
-"""kazoe CLI: count / compare / git-compare.
+"""python_sloc_counter CLI: count / compare / git-compare.
 Exit codes: 0 ok, 1 fatal, 2 partial (some files could not be decoded
 or counted), per DECODE-POLICY.md."""
 from __future__ import annotations
@@ -47,7 +47,7 @@ def _common(p):
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(prog="kazoe")
+    parser = argparse.ArgumentParser(prog="python-sloc-counter")
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_count = sub.add_parser("count", help="count steps in a file or folder")
@@ -69,7 +69,7 @@ def main(argv=None) -> int:
     try:
         if args.command == "count":
             if not os.path.exists(args.path):
-                print(f"kazoe: no such path: {args.path}", file=sys.stderr)
+                print(f"python-sloc-counter: no such path: {args.path}", file=sys.stderr)
                 return 1
             results = count_tree(args.path, args.encoding, args.on_error,
                                  args.strict_detection)
@@ -79,7 +79,7 @@ def main(argv=None) -> int:
         if args.command == "compare":
             for p in (args.before, args.after):
                 if not os.path.exists(p):
-                    print(f"kazoe: no such path: {p}", file=sys.stderr)
+                    print(f"python-sloc-counter: no such path: {p}", file=sys.stderr)
                     return 1
             before = count_tree(args.before, args.encoding, args.on_error,
                                 args.strict_detection)
@@ -92,7 +92,7 @@ def main(argv=None) -> int:
 
         # git-compare
         if not os.path.isdir(args.repo):
-            print(f"kazoe: no such directory: {args.repo}", file=sys.stderr)
+            print(f"python-sloc-counter: no such directory: {args.repo}", file=sys.stderr)
             return 1
         comp, meta = git_compare(args.repo, args.before, args.after,
                                  args.encoding, args.on_error,
@@ -104,10 +104,10 @@ def main(argv=None) -> int:
         return 2 if _exit_code(meta["before_results"]) or \
             _exit_code(meta["after_results"]) else 0
     except AbortError as exc:
-        print(f"kazoe: aborted: {exc}", file=sys.stderr)
+        print(f"python-sloc-counter: aborted: {exc}", file=sys.stderr)
         return 1
     except GitError as exc:
-        print(f"kazoe: git error: {exc}", file=sys.stderr)
+        print(f"python-sloc-counter: git error: {exc}", file=sys.stderr)
         return 1
 
 

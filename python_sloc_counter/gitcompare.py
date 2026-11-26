@@ -57,7 +57,7 @@ def git_compare(repo: str, ref_before: str, ref_after: str,
         raise GitError(f"not a git repository: {repo}")
     commit_before = resolve_ref(repo, ref_before)
     commit_after = resolve_ref(repo, ref_after)
-    with tempfile.TemporaryDirectory(prefix="kazoe-git-") as td:
+    with tempfile.TemporaryDirectory(prefix="sloc-git-") as td:
         dir_b = os.path.join(td, "before")
         dir_a = os.path.join(td, "after")
         os.makedirs(dir_b)

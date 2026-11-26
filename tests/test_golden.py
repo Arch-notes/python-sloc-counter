@@ -5,8 +5,8 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from kazoe.counter import count_tree
-from kazoe.output import count_document
+from python_sloc_counter.counter import count_tree
+from python_sloc_counter.output import count_document
 
 GOLDEN_DIR = os.path.join(os.path.dirname(__file__), "golden")
 

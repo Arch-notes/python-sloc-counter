@@ -5,7 +5,7 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from kazoe.counter import count_file
+from python_sloc_counter.counter import count_file
 
 SQL_SAMPLE = '''-- migration 001
 CREATE TABLE users (
