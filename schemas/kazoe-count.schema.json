@@ -1,0 +1,288 @@
+{
+  "$defs": {
+    "class": {
+      "properties": {
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "end_line": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "non_method_counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "start_line": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "start_line",
+        "end_line",
+        "counts",
+        "non_method_counts"
+      ],
+      "type": "object"
+    },
+    "counts": {
+      "properties": {
+        "blank": {
+          "type": "integer"
+        },
+        "comment": {
+          "type": "integer"
+        },
+        "effective": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "effective",
+        "comment",
+        "blank"
+      ],
+      "type": "object"
+    },
+    "file": {
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "classes": {
+          "items": {
+            "$ref": "#/$defs/class"
+          },
+          "type": "array"
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "encoding": {
+          "type": "string"
+        },
+        "encoding_source": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        },
+        "functions": {
+          "items": {
+            "$ref": "#/$defs/function"
+          },
+          "type": "array"
+        },
+        "language": {
+          "type": "string"
+        },
+        "language_source": {
+          "type": "string"
+        },
+        "non_function_counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "non_unit_counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "path": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "counted",
+            "skipped_binary",
+            "error"
+          ]
+        },
+        "units": {
+          "items": {
+            "$ref": "#/$defs/unit"
+          },
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "category",
+        "language",
+        "status",
+        "counts",
+        "functions",
+        "units"
+      ],
+      "type": "object"
+    },
+    "function": {
+      "properties": {
+        "body_hash": {
+          "type": "string"
+        },
+        "container": {
+          "type": "string"
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "end_line": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "start_line": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "kind",
+        "start_line",
+        "end_line",
+        "counts",
+        "body_hash"
+      ],
+      "type": "object"
+    },
+    "unit": {
+      "properties": {
+        "attributes": {
+          "type": "object"
+        },
+        "body_hash": {
+          "type": "string"
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "end_line": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "start_line": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "kind",
+        "start_line",
+        "end_line",
+        "counts",
+        "body_hash"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "kazoe-count.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "files": {
+      "items": {
+        "$ref": "#/$defs/file"
+      },
+      "type": "array"
+    },
+    "kind": {
+      "const": "count"
+    },
+    "root": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "summary": {
+      "properties": {
+        "by_category": {
+          "type": "object"
+        },
+        "by_language": {
+          "type": "object"
+        },
+        "counted": {
+          "type": "integer"
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "errors": {
+          "type": "integer"
+        },
+        "files": {
+          "type": "integer"
+        },
+        "skipped_binary": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "files",
+        "counted",
+        "skipped_binary",
+        "errors",
+        "counts"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "tool",
+    "summary",
+    "files"
+  ],
+  "title": "kazoe count output",
+  "type": "object"
+}

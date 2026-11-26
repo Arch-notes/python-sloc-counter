@@ -1,0 +1,491 @@
+{
+  "files": [
+    {
+      "category": "docs",
+      "classes": [],
+      "counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 5,
+        "total": 7
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [],
+      "language": "markdown",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 5,
+        "total": 7
+      },
+      "non_unit_counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 5,
+        "total": 7
+      },
+      "path": "README.md",
+      "status": "counted",
+      "units": [],
+      "warnings": []
+    },
+    {
+      "category": "code",
+      "classes": [
+        {
+          "counts": {
+            "blank": 1,
+            "comment": 0,
+            "effective": 6,
+            "total": 7
+          },
+          "end_line": 7,
+          "key": "Greeter",
+          "name": "Greeter",
+          "non_method_counts": {
+            "blank": 1,
+            "comment": 0,
+            "effective": 3,
+            "total": 4
+          },
+          "start_line": 1
+        }
+      ],
+      "counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 9,
+        "total": 11
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [
+        {
+          "body_hash": "sha256:47420b48fb7a21608eac7866af35c52e47172d15c7e986401692d1983d5aa7e2",
+          "container": "Greeter",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 3,
+            "total": 3
+          },
+          "end_line": 6,
+          "key": "Greeter.greet",
+          "kind": "method",
+          "name": "greet",
+          "signature": "(name: string)",
+          "start_line": 4
+        },
+        {
+          "body_hash": "sha256:aa07e036372f0479833ec2a11b6b819fcc47b8e2cf193fc428a83b605f32e86d",
+          "container": "",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 3,
+            "total": 3
+          },
+          "end_line": 11,
+          "key": "helper",
+          "kind": "function",
+          "name": "helper",
+          "signature": "(x: number)",
+          "start_line": 9
+        }
+      ],
+      "language": "typescript",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 3,
+        "total": 5
+      },
+      "non_unit_counts": {
+        "blank": 2,
+        "comment": 0,
+        "effective": 3,
+        "total": 5
+      },
+      "path": "app.ts",
+      "status": "counted",
+      "units": [],
+      "warnings": []
+    },
+    {
+      "category": "code",
+      "classes": [
+        {
+          "counts": {
+            "blank": 3,
+            "comment": 1,
+            "effective": 6,
+            "total": 10
+          },
+          "end_line": 13,
+          "key": "Calc",
+          "name": "Calc",
+          "non_method_counts": {
+            "blank": 3,
+            "comment": 1,
+            "effective": 2,
+            "total": 6
+          },
+          "start_line": 4
+        }
+      ],
+      "counts": {
+        "blank": 7,
+        "comment": 2,
+        "effective": 8,
+        "total": 17
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [
+        {
+          "body_hash": "sha256:f23cdeb24b82539d9ed55e2d66a4fee574225f5700e91d23b06ee9d898f3ec89",
+          "container": "Calc",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 2,
+            "total": 2
+          },
+          "end_line": 10,
+          "key": "Calc.add",
+          "kind": "method",
+          "name": "add",
+          "signature": "self, a, b",
+          "start_line": 9
+        },
+        {
+          "body_hash": "sha256:c9f8c5ff6644c5c2e84a9448bd842fed3f6798da52d0da75d033dd352a88cf58",
+          "container": "Calc",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 2,
+            "total": 2
+          },
+          "end_line": 13,
+          "key": "Calc.mul",
+          "kind": "method",
+          "name": "mul",
+          "signature": "self, a, b",
+          "start_line": 12
+        },
+        {
+          "body_hash": "sha256:288329dbc38b5ac31f948887307b3dc7e9a6c8ddff9189c13146690e37124af6",
+          "container": "",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 2,
+            "total": 2
+          },
+          "end_line": 17,
+          "key": "top",
+          "kind": "function",
+          "name": "top",
+          "signature": "",
+          "start_line": 16
+        }
+      ],
+      "language": "python",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 7,
+        "comment": 2,
+        "effective": 2,
+        "total": 11
+      },
+      "non_unit_counts": {
+        "blank": 7,
+        "comment": 2,
+        "effective": 2,
+        "total": 11
+      },
+      "path": "calc.py",
+      "status": "counted",
+      "units": [],
+      "warnings": []
+    },
+    {
+      "category": "config",
+      "classes": [],
+      "counts": {
+        "blank": 0,
+        "comment": 1,
+        "effective": 3,
+        "total": 4
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [],
+      "language": "yaml",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 0,
+        "comment": 1,
+        "effective": 3,
+        "total": 4
+      },
+      "non_unit_counts": {
+        "blank": 0,
+        "comment": 1,
+        "effective": 3,
+        "total": 4
+      },
+      "path": "config.yaml",
+      "status": "counted",
+      "units": [],
+      "warnings": []
+    },
+    {
+      "category": "iac",
+      "classes": [],
+      "counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 6,
+        "total": 7
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [],
+      "language": "terraform",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 0,
+        "total": 1
+      },
+      "non_unit_counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 0,
+        "total": 1
+      },
+      "path": "main.tf",
+      "status": "counted",
+      "units": [
+        {
+          "attributes": {
+            "labels": [
+              "aws_s3_bucket",
+              "logs"
+            ]
+          },
+          "body_hash": "sha256:7d9cb503cc5552aa387e37f52ae609865ecabb77a7e05e7d6a678882a28ec9b3",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 3,
+            "total": 3
+          },
+          "end_line": 3,
+          "key": "resource.aws_s3_bucket.logs",
+          "kind": "resource",
+          "name": "aws_s3_bucket.logs",
+          "start_line": 1
+        },
+        {
+          "attributes": {
+            "labels": [
+              "region"
+            ]
+          },
+          "body_hash": "sha256:9f72ad0e440dedd4e5768744d908df38f938234c6e2b31c832e62a30cfa1a25b",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 3,
+            "total": 3
+          },
+          "end_line": 7,
+          "key": "variable.region",
+          "kind": "variable",
+          "name": "region",
+          "start_line": 5
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "category": "code",
+      "classes": [],
+      "counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 8,
+        "total": 9
+      },
+      "encoding": "utf-8",
+      "encoding_source": "heuristic",
+      "functions": [
+        {
+          "body_hash": "sha256:41a97879e699a16df133135baaedaaedbe8c73a811ad16bfa0e7b51adbc3e5f2",
+          "container": "",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 4,
+            "total": 4
+          },
+          "end_line": 9,
+          "key": "add_user",
+          "kind": "procedure",
+          "name": "add_user",
+          "signature": "IN p_name TEXT",
+          "start_line": 6
+        }
+      ],
+      "language": "sql",
+      "language_source": "extension",
+      "non_function_counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 0,
+        "total": 1
+      },
+      "non_unit_counts": {
+        "blank": 1,
+        "comment": 0,
+        "effective": 0,
+        "total": 1
+      },
+      "path": "schema.sql",
+      "status": "counted",
+      "units": [
+        {
+          "attributes": {},
+          "body_hash": "sha256:c5122fa3181c3f91d729b90fc099faf8050380e24efbf992c5731f1ccb81683b",
+          "counts": {
+            "blank": 0,
+            "comment": 0,
+            "effective": 4,
+            "total": 4
+          },
+          "end_line": 4,
+          "key": "table.users",
+          "kind": "table",
+          "name": "users",
+          "start_line": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "kind": "count",
+  "schema_version": "1.0",
+  "summary": {
+    "by_category": {
+      "code": {
+        "counts": {
+          "blank": 10,
+          "comment": 2,
+          "effective": 25,
+          "total": 37
+        },
+        "files": 3
+      },
+      "config": {
+        "counts": {
+          "blank": 0,
+          "comment": 1,
+          "effective": 3,
+          "total": 4
+        },
+        "files": 1
+      },
+      "docs": {
+        "counts": {
+          "blank": 2,
+          "comment": 0,
+          "effective": 5,
+          "total": 7
+        },
+        "files": 1
+      },
+      "iac": {
+        "counts": {
+          "blank": 1,
+          "comment": 0,
+          "effective": 6,
+          "total": 7
+        },
+        "files": 1
+      }
+    },
+    "by_language": {
+      "markdown": {
+        "counts": {
+          "blank": 2,
+          "comment": 0,
+          "effective": 5,
+          "total": 7
+        },
+        "files": 1
+      },
+      "python": {
+        "counts": {
+          "blank": 7,
+          "comment": 2,
+          "effective": 8,
+          "total": 17
+        },
+        "files": 1
+      },
+      "sql": {
+        "counts": {
+          "blank": 1,
+          "comment": 0,
+          "effective": 8,
+          "total": 9
+        },
+        "files": 1
+      },
+      "terraform": {
+        "counts": {
+          "blank": 1,
+          "comment": 0,
+          "effective": 6,
+          "total": 7
+        },
+        "files": 1
+      },
+      "typescript": {
+        "counts": {
+          "blank": 2,
+          "comment": 0,
+          "effective": 9,
+          "total": 11
+        },
+        "files": 1
+      },
+      "yaml": {
+        "counts": {
+          "blank": 0,
+          "comment": 1,
+          "effective": 3,
+          "total": 4
+        },
+        "files": 1
+      }
+    },
+    "counted": 6,
+    "counts": {
+      "blank": 13,
+      "comment": 3,
+      "effective": 39,
+      "total": 55
+    },
+    "errors": 0,
+    "files": 6,
+    "skipped_binary": 0
+  }
+}
